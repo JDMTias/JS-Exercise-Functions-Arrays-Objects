@@ -338,12 +338,12 @@ console.log(getModelYears([
 */
 function getCarInfoById(inventory, id) {
     for (let i = 0; i <inventory.length; i++)
-    if (inventory.id === id) {
-      return `This is a ${inventory.car_make} ${inventory.car_model}`
+    if (id === inventory[i].id) {
+      return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`
     }
   }
   
-  console.log(getCarInfoByIndex([
+  console.log(getCarInfoById([
     { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
     { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
     { id: 3, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
@@ -357,7 +357,7 @@ function getCarInfoById(inventory, id) {
     { id: 11, car_make: "Infiniti", car_model: "G35", car_year: 2004 },
     { id: 12, car_make: "Lotus", car_model: "Esprit", car_year: 2004 },
     { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
-    { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }], 14))
+    { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }], 1))
 
 
 /**
